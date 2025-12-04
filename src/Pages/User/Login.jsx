@@ -26,7 +26,7 @@ const Login = () => {
     try {
       setSubmitting(true);
       const response = await axios.post(
-        "http://127.0.0.1:8000/users/login/",
+        "https://jayaprak.pythonanywhere.com/users/login/",
         { email, password },
         { headers: { "Content-Type": "application/json" } }
       );

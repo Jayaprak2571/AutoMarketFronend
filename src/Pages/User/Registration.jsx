@@ -54,7 +54,7 @@ const Registration = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/users/alloper/", formData, {
+      const response = await axios.post("https://jayaprak.pythonanywhere.com/users/alloper/", formData, {
         headers: { "Content-Type": "application/json" },
       });
       setSuccess("User registered successfully!");
