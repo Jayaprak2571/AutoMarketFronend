@@ -155,7 +155,7 @@ const TestDriveBookingForm = function TestDriveBookingForm() {
       if (!payload.vehicle_id) throw new Error("Vehicle ID missing.");
       if (!payload.scheduled_date) throw new Error("Booking date & time is required.");
 
-      const res = await axios.post("http://127.0.0.1:8002/testdrive/test/", payload, {
+      const res = await axios.post("https://jayapraky.pythonanywhere.com/testdrive/test/", payload, {
         headers: {
           "Content-Type": "application/json",
           Authorization: auth.token ? `Bearer ${auth.token}` : undefined,
