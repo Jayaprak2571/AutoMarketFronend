@@ -7,7 +7,7 @@ import Footer from "../../Components/Footer";
 
 /** Use same origin as your Python calls */
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8001",
+  baseURL: "https://vjayap.pythonanywhere.com",
 });
 
 const API_ORIGIN = api.defaults.baseURL?.replace(/\/+$/, "") || "";

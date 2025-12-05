@@ -65,7 +65,7 @@ const AddCarForm = () => {
         throw new Error("Condition must be New or Used.");
       if (!payload.seller_id) throw new Error("No user ID found. Please sign in.");
 
-      const res = await axios.post("http://127.0.0.1:8001/cars/addcars/", payload, {
+      const res = await axios.post("https://vjayap.pythonanywhere.com/cars/addcars/", payload, {
         headers: {
           "Content-Type": "application/json",
           Authorization: auth.token ? `Bearer ${auth.token}` : undefined,

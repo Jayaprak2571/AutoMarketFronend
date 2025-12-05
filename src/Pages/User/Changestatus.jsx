@@ -68,7 +68,7 @@ const cardStyles = {
   },
 };
 
-const carsApi = axios.create({ baseURL: "http://localhost:8001" });
+const carsApi = axios.create({ baseURL: "https://vjayap.pythonanywhere.com" });
 const drivesApi = axios.create({ baseURL: "http://localhost:8002" });
 
 const STATUS_OPTIONS = ["Pending", "Confirmed", "Cancelled"];

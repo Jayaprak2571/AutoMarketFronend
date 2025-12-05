@@ -9,7 +9,7 @@ import axios from "axios";
 
 // import Navbar, Footer, and your `ui` style object
 
-const api = axios.create({ baseURL: "http://localhost:8001" });
+const api = axios.create({ baseURL: "https://vjayap.pythonanywhere.com" });
 
 function toAbsolute(src) {
   if (!src) return "";
