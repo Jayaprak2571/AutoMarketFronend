@@ -10,6 +10,7 @@ import AllCars from './Pages/User/Allcars';
 import TestDriveBookingForm from './Pages/User/Bookride'
 import TestDriveUpdateForm from './Pages/User/Changestatus';
 import MyCars from './Pages/User/Mycars';
+import MyVehiclesStatus from './Pages/User/UserDriveStatus'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path='/allcars' element={<AllCars />}></Route>
           <Route path='/mycars/:sellerId' element={<MyCars />}></Route>
           <Route path='/bookride/:vehicleId/:sellerId' element={<TestDriveBookingForm />}></Route>
+          <Route path='/myvehiclesstatus/:userId' element={<MyVehiclesStatus />}></Route>
           </Routes>
       </BrowserRouter>
     </div>

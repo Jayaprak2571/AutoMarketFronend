@@ -9,7 +9,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("access_token");
     localStorage.removeItem("user_id");
-    navigate("/login");
+    navigate("/");
   };
   const userId = localStorage.getItem('user_id')
 
@@ -24,7 +24,25 @@ const Navbar = () => {
         <ul style={styles.links}>
           <li><Link to="/" style={styles.link}>Home</Link></li>
           <li><Link to="/allcars" style={styles.link}>Browse Cars</Link></li>
-          <li><Link to={`/addcars/${userId}`} style={styles.link}>Sell Car</Link></li>
+          <li>
+            {userId ? (
+              <Link to={`/addcars/${userId}`} style={styles.link}>Sell Car</Link>
+            ) : (
+              <button type="button" disabled style={{ ...styles.link, opacity: 0.6, cursor: "not-allowed" }}>
+                Sell Car
+              </button>
+            )}
+          </li>
+          <li>
+            {userId ? (
+              <Link to={`/myvehiclesstatus/${userId}`} style={styles.link}>Check Status</Link>
+            ) : (
+              <button type="button" disabled style={{ ...styles.link, opacity: 0.6, cursor: "not-allowed" }}>
+                Check Status
+              </button>
+            )}
+          </li>
+
         </ul>
 
         <div>
@@ -33,7 +51,7 @@ const Navbar = () => {
               Logout
             </button>
           ) : (
-            <Link to="/login" style={styles.btnPrimary}>
+            <Link to="/" style={styles.btnPrimary}>
               Login
             </Link>
           )}
